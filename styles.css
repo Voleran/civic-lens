@@ -184,7 +184,7 @@ h1{
 
 .menu a:hover,
 .menu a:focus-visible{
-  filter: brightness(1.05);
+  filter: brightness(1.15);
   outline: none;
 }
 
@@ -256,7 +256,25 @@ video{
   border: 1px solid rgba(0,0,0,0.35);
   background: #000;
 }
+ #breaking-news video,
+.menu a,
+#social a,
+button[type="submit"]{
+  transition: transform 0.25s ease, filter 0.25s ease, background-color 0.25s ease;
+}
 
+/* Video zoom on hover */
+#breaking-news article video:hover{
+  transform: scale(1.03);
+}
+
+#breaking-news article{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#breaking-news article:hover{
+  transform: translateY(-3px);
+}
 /* Featured Articles grid */
 .articles-list{
   display: grid;
